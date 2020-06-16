@@ -34,26 +34,34 @@
         }
     </style>
 
+    <tr>
 
     <div class="example-wrapper">
     <h1>Hello Welcome to my blogs</h1>
 
+  <div class="container">
+        <div class="row">
 
     {% for blogpost in blogpost %}
 
         <div class="card-body">
 
+
             <h6 class="card-subtitle mb-2 text-muted">{{ blogpost.title }}</h6>
 
+
             <p class="card-text">{{ blogpost.klantid}}</p>
+
+
+
             <p class="card-text">{{ blogpost.body}}</p>
 
 
 
-        </div>
+
         </div>
 
-        </tr>
+
     {% else %}
         <tr>
             <td colspan="6">no records found</td>
@@ -64,5 +72,5 @@
 
 
 
-    </div>
+
 {% endblock %}
