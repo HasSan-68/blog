@@ -19,7 +19,7 @@ class HomeController extends AbstractController
 
         $klant = $klant->getClassName(Klant::class);
         return $this->render('home/index.html.twig', [
-            'blogpost' => $blogpostRepository->findAll(),
+            'blogpost' => $blogpostRepository->findAll(['home' => true]),
             'controller_name' => 'HomeController','klant' => $blogpostRepository,
         ]);
     }

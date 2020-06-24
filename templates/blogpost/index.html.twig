@@ -25,6 +25,7 @@
                 <td>{{ blogpost.klantid}}</td>
                 <td>{{ blogpost.title }}</td>
                 <td>{{ blogpost.body }}</td>
+                <td><img src="{{ vich_uploader_asset(blogpost, 'imageFile') }}" alt="{{ blogpost.title }}" /></td>
                 <td>{{ blogpost.createdAt ? blogpost.createdAt|date('Y-m-d H:i:s T') : '' }}</td>
                 <td>{{ blogpost.updatedAt ? blogpost.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
